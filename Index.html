@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+</head>
+<body>
+    
+    <h1 style="color:blue">Tu resultado es: <span id="total"></span> de <span id="dimension"></span></h1>
+    <h1 style="color:green">Respuestas correctas: <span id="respuestas"></span></h1>
+    <h1>Tus respuetas: <span id="respuestaUsuario", style="color:red"></span></h1>
+
+
+    <script>
+     
+     let total = 0;
+     const respuestas = ["c", "d", "b", "a", "c"];
+     const p1 = prompt("¿Dónde realizan las plantas la fotosíntesis?\n a)En el aire\n b)En el tallo\n c)En las hojas\n d)En la raíz");
+     const p2 = prompt("¿Que musculo impulsa la sangre por todo el cuerpo?\n a)La lengua\n b)Los pulmones\n c)El cerebro\n d)El corazón");
+     const p3 = prompt("¿Que necesitan las células para dividirse?\n a)Nada\n b)Energía\n c)Sangre\n d)Otra célula");
+     const p4 = prompt("¿De que otra amanera se nombra el ADN?\n a)Ácido desoxirribonucleico\n b)Citosina\n c)DNI\n d)Sangre");
+     const p5 = prompt("¿Como se clasifican las células?\n a)Unicelulares y multicelulares\n b)Animal y vegetal\n c)Eucariontas y procariontas\n d)Primarias y secundarias");
+     const respuestaUsuario = [p1, p2, p3, p4, p5]; 
+    for(let i = 0; i<respuestas.length; i++){
+        if(respuestaUsuario[i] === respuestas[i]){
+            total++;
+     }
+    }
+
+    document.getElementById('total').innerHTML = total;
+    document.getElementById('dimension').innerHTML = respuestas.length;
+    document.getElementById('respuestas').innerHTML = respuestas;
+    document.getElementById('respuestaUsuario').innerHTML = respuestaUsuario;
+    console.log(respuestaUsuario);
+    console.log("Tu resultado es " + total);    
+    </script>
+</body>
+</html>
